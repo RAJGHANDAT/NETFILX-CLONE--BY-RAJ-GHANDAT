@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Help Centre</title>
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" type="image/x-icon">
+    <style>
+        /* Help Center Theme - White Background */
+        body { margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f3f3f3; color: #333; }
+        
+        /* Navbar */
+        .help-nav { background: black; padding: 0 4%; height: 70px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { width: 100px; height: auto; }
+        .join-btn { background: #e50914; color: white; border: none; padding: 7px 17px; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 14px; }
+        
+        /* Hero Search Area */
+        .help-hero { background: white; padding: 60px 20px; text-align: center; border-bottom: 1px solid #ccc; }
+        .help-hero h1 { font-size: 40px; margin-bottom: 20px; font-weight: 800; color: #222; }
+        
+        .search-box { position: relative; max-width: 600px; margin: 0 auto; }
+        .search-box input { width: 100%; padding: 15px 20px; font-size: 16px; border: 1px solid #999; border-radius: 4px; outline: none; }
+        .search-box button { position: absolute; right: 10px; top: 10px; background: none; border: none; font-size: 20px; cursor: pointer; }
+
+        /* Content Links */
+        .help-content { max-width: 900px; margin: 30px auto; padding: 0 20px; display: flex; gap: 30px; flex-wrap: wrap; }
+        
+        .column { flex: 1; min-width: 250px; }
+        .column h3 { font-size: 18px; margin-bottom: 15px; }
+        
+        .link-list a { display: block; padding: 10px 0; color: #0071eb; text-decoration: none; border-bottom: 1px solid #ddd; }
+        .link-list a:hover { text-decoration: underline; }
+
+        /* Contact Section */
+        .contact-section { text-align: center; margin: 50px 0; padding: 20px; }
+        .contact-btn { background: #333; color: white; padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <nav class="help-nav">
+        <a href="index.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logo" alt="Netflix">
+        </a>
+        <a href="login.html" class="join-btn">Sign In</a>
+    </nav>
+
+    <div class="help-hero">
+        <h1>Help Centre</h1>
+        <div class="search-box">
+            <input type="text" placeholder="How can we help?">
+            <button>🔍</button>
+        </div>
+    </div>
+
+    <div class="help-content">
+        <div class="column">
+            <h3>Popular Topics</h3>
+            <div class="link-list">
+                <a href="#">How to reset password</a>
+                <a href="#">How to cancel Netflix</a>
+                <a href="#">Plans and Pricing</a>
+                <a href="#">Can't sign in</a>
+            </div>
+        </div>
+        <div class="column">
+            <h3>Getting Started</h3>
+            <div class="link-list">
+                <a href="#">Creating an account</a>
+                <a href="#">Using Netflix on your TV</a>
+                <a href="#">Downloading TV shows</a>
+                <a href="#">Parental Controls</a>
+            </div>
+        </div>
+        <div class="column">
+            <h3>Quick Links</h3>
+            <div class="link-list">
+                <a href="#">Request a TV show or movie</a>
+                <a href="#">Update email</a>
+                <a href="#">Update payment method</a>
+                <a href="#">Billing Issues</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <p>Need more help?</p> <br>
+        <a href="#" class="contact-btn">Call Us</a>
+        <a href="#" class="contact-btn">Start Live Chat</a>
+    </div>
+
+</body>
+</html>

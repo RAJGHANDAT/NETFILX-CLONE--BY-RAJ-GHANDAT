@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" type="image/x-icon">
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f3f3f3; color: #333; }
+        
+        .nav-bar { background: black; padding: 0 4%; height: 70px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { width: 100px; }
+        .avatar { width: 35px; border-radius: 4px; }
+
+        .account-container { max-width: 1000px; margin: 20px auto; padding: 20px; }
+        .section-header { font-size: 34px; border-bottom: 1px solid #999; padding-bottom: 10px; margin-bottom: 20px; display: flex; gap: 15px; align-items: center;}
+        .member-since { font-size: 14px; font-weight: bold; color: #555; margin-left: 10px; }
+
+        .row { display: flex; border-bottom: 1px solid #ccc; padding: 20px 0; }
+        .label { width: 30%; color: #888; text-transform: uppercase; font-size: 14px; }
+        .content { width: 70%; font-weight: 500; }
+        .content div { margin-bottom: 10px; display: flex; justify-content: space-between; }
+        .link-blue { color: #0073e6; text-decoration: none; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="index.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logo">
+        </a>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" class="avatar" alt="User">
+    </nav>
+
+    <div class="account-container">
+        <div class="section-header">
+            Account 
+            <span class="member-since">Member Since January 2024</span>
+        </div>
+
+        <div class="row">
+            <div class="label">Membership & Billing</div>
+            <div class="content">
+                <div>
+                    <span>rajghandat@example.com</span>
+                    <a href="#" class="link-blue">Change account email</a>
+                </div>
+                <div>
+                    <span>Password: ********</span>
+                    <a href="#" class="link-blue">Change password</a>
+                </div>
+                <div>
+                    <span>Phone: +91 98765 43210</span>
+                    <a href="#" class="link-blue">Change phone number</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="label">Plan Details</div>
+            <div class="content">
+                <div>
+                    <span style="font-weight: bold;">Premium Ultra HD</span>
+                    <a href="#" class="link-blue">Change plan</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="label">Settings</div>
+            <div class="content">
+                <div><a href="#" class="link-blue">Parental controls</a></div>
+                <div><a href="#" class="link-blue">Test participation</a></div>
+                <div><a href="#" class="link-blue">Manage download devices</a></div>
+                <div><a href="#" class="link-blue">Sign out of all devices</a></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
