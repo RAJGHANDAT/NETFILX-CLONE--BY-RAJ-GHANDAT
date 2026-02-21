@@ -61,41 +61,39 @@ const moviesDB = {
 };
 
 // ==========================================
-// 2. LOGIN PAGE LOGIC (Final Local Fix)
+// 2. CONTINUE AS GUEST LOGIC
 // ==========================================
-const loginForm = document.getElementById('loginForm');
+const guestBtn = document.getElementById('guestBtn');
 const introContainer = document.getElementById('intro-container');
 const videoPlayer = document.getElementById('netflix-video');
 
-if (loginForm) {
-    loginForm.addEventListener('submit', (e) => {
+if (guestBtn) {
+    guestBtn.addEventListener('click', (e) => {
         e.preventDefault(); 
-        const email = document.getElementById('userEmail').value;
-        localStorage.setItem('userEmail', email);
+        
+        // System ko batate hain ki ye Guest user hai
+        localStorage.setItem('userEmail', 'Guest');
 
+        // Agar intro video ka code exist karta hai
         if (introContainer && videoPlayer) {
-            // Screen Kali Karo
-            introContainer.style.display = "flex";
+            introContainer.style.display = "flex"; // Video container dikhao
             
-            // Video Play Karo
             videoPlayer.play().then(() => {
-                // Agar play ho gaya to 4 second wait karo
+                // Video chalne ke baad 4 second wait karke next page pe bhejo
                 setTimeout(() => {
                     window.location.href = 'movies.html';
                 }, 4000);
             }).catch((error) => {
-                // Agar Error aaya (Browser ne roka), to Alert dikhao aur aage badho
+                // Agar browser ne autoplay block kiya toh mute karke chalao
                 console.log("Video Error:", error);
-                // Fallback: Agar sound ki wajah se roka, to mute karke chalao
                 videoPlayer.muted = true;
                 videoPlayer.play();
-                
-                // Phir bhi bhej do
                 setTimeout(() => {
                     window.location.href = 'movies.html';
                 }, 4000);
             });
         } else {
+            // Agar video nahi mili, toh direct movies page par jao
             window.location.href = 'movies.html';
         }
     });
@@ -109,9 +107,8 @@ const welcomeMsg = document.getElementById('welcomeUser');
 const searchInput = document.getElementById('searchInput');
 
 if (moviesGrid) {
-    // Navbar mein email dikhao
-    const email = localStorage.getItem('userEmail');
-    if(email && welcomeMsg) welcomeMsg.innerText = email;
+    // Navbar mein welcome guest dikhao
+    if(welcomeMsg) welcomeMsg.innerText = "Welcome, Guest";
 
     // Function to render movies
     function renderMovies(filter = '') {
@@ -119,8 +116,8 @@ if (moviesGrid) {
         for (const category in moviesDB) {
             const movies = moviesDB[category].filter(movie => movie.title.toLowerCase().includes(filter.toLowerCase()));
             if (movies.length > 0) {
-                html += `<h2 class="grid-title">${category}</h2>
-                <div class="movies-grid">
+                html += `<h2 class="row-title">${category}</h2>
+                <div class="movie-row">
                     ${movies.map(movie => `
                         <div class="grid-card" onclick="openMovie(${movie.id})">
                             <img src="${movie.img}" alt="${movie.title}">

@@ -292,3 +292,54 @@ footer {
     .email-signup { flex-direction: column; }
     .email-signup input { width: 100%; }
 }
+
+/* MOVIE CAROUSELS */
+.movies-container { padding: 100px 0; background: #141414; min-height: 100vh; }
+.row-title { 
+    font-size: 1.4vw; 
+    font-weight: bold; 
+    color: #e5e5e5; 
+    margin-bottom: 10px; 
+    margin-left: 4%; 
+}
+.movie-row {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 4%;
+    gap: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.movie-row::-webkit-scrollbar { display: none; }
+.grid-card { 
+    cursor: pointer; 
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    position: relative; 
+    animation: fadeInUp 0.6s ease-out; 
+    flex-shrink: 0;
+    width: 180px;
+}
+.grid-card:hover { 
+    transform: scale(1.1); 
+    z-index: 10; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8); 
+}
+.grid-card img { 
+    width: 100%; 
+    border-radius: 4px; 
+    aspect-ratio: 9 / 16; 
+    object-fit: cover; 
+}
+.grid-card h3 { font-size: 16px; margin-top: 10px; color: #e5e5e5; }
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
